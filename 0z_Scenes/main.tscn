@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmpjaqh268041"]
+
+[ext_resource type="Texture2D" uid="uid://b435ad3ho5lvi" path="res://MainMenu/main_menu_box_v00.png" id="1_wgy7j"]
+[ext_resource type="Texture2D" uid="uid://d0qvoscg2cmqk" path="res://MainMenu/load_game_v00.png" id="2_jwqnr"]
+[ext_resource type="Texture2D" uid="uid://rut5arixo5qd" path="res://MainMenu/new_game_v00.png" id="3_3mmw3"]
+[ext_resource type="Texture2D" uid="uid://l8wina3jymlo" path="res://MainMenu/options_v00.png" id="4_dvrcv"]
+[ext_resource type="Texture2D" uid="uid://x374rhd8fs41" path="res://MainMenu/achievements_v00.png" id="5_sypwb"]
+[ext_resource type="Texture2D" uid="uid://cc0rfjn57f4fs" path="res://MainMenu/credits_v00.png" id="6_5drr1"]
+[ext_resource type="Texture2D" uid="uid://bovpafob0mn1t" path="res://MainMenu/quit_v00.png" id="7_1va6o"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MainMenu" type="Node" parent="."]
+
+[node name="BoxSprite" type="Sprite2D" parent="MainMenu"]
+position = Vector2(43, 0)
+texture = ExtResource("1_wgy7j")
+
+[node name="LoadGameSprite" type="Sprite2D" parent="MainMenu"]
+position = Vector2(43, -64)
+texture = ExtResource("2_jwqnr")
+
+[node name="NewGameSprite" type="Sprite2D" parent="MainMenu"]
+position = Vector2(43, -43)
+texture = ExtResource("3_3mmw3")
+
+[node name="OptionsSprite" type="Sprite2D" parent="MainMenu"]
+position = Vector2(43, -22)
+texture = ExtResource("4_dvrcv")
+
+[node name="AchievementsSprite" type="Sprite2D" parent="MainMenu"]
+position = Vector2(43, -1)
+texture = ExtResource("5_sypwb")
+
+[node name="CreditsSprite" type="Sprite2D" parent="MainMenu"]
+position = Vector2(43, 20)
+texture = ExtResource("6_5drr1")
+
+[node name="QuitSprite" type="Sprite2D" parent="MainMenu"]
+position = Vector2(43, 41)
+texture = ExtResource("7_1va6o")
