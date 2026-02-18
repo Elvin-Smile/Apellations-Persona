@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://geh42eeyin7c"]
+
+[ext_resource type="Script" uid="uid://cuba4ephfkfme" path="res://accomplice_guy_class.gd" id="1_s32s5"]
+[ext_resource type="Texture2D" uid="uid://fbmii74usmb5" path="res://Marko Petriković/petrikovic_s0_v0.png" id="2_rm3ia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3k04"]
+size = Vector2(16, 16)
+
+[node name="Marko" type="CharacterBody2D"]
+script = ExtResource("1_s32s5")
+metadata/_custom_type_script = "uid://cuba4ephfkfme"
+
+[node name="Petrikovic" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+texture = ExtResource("2_rm3ia")
+hframes = 12
+
+[node name="Guberina" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t3k04")

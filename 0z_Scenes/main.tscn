@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://x374rhd8fs41" path="res://MainMenu/achievements_v00.png" id="5_sypwb"]
 [ext_resource type="Texture2D" uid="uid://cc0rfjn57f4fs" path="res://MainMenu/credits_v00.png" id="6_5drr1"]
 [ext_resource type="Texture2D" uid="uid://bovpafob0mn1t" path="res://MainMenu/quit_v00.png" id="7_1va6o"]
-[ext_resource type="Script" path="res://0z_Scenes/main_menu_buttons.gd" id="8_r6lwq"]
+[ext_resource type="Script" uid="uid://07w52nqie5yk" path="res://0z_Scripts/main_menu_buttons.gd" id="8_54t02"]
 [ext_resource type="Texture2D" uid="uid://bfv2aofl8ln87" path="res://MainMenu/main_menu_button_v01.png" id="9_hxqed"]
 
 [node name="Main" type="Node2D"]
@@ -56,7 +56,7 @@ offset_left = 0.0699959
 offset_top = 0.0800018
 offset_right = 0.0699959
 offset_bottom = 0.0800018
-script = ExtResource("8_r6lwq")
+script = ExtResource("8_54t02")
 
 [node name="LoadGameButtonSprite" type="Sprite2D" parent="MainMenuButtons"]
 visible = false
