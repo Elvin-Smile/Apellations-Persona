@@ -14,7 +14,7 @@ func _ready():
 		get_child(i).hide();
 	print(button_num);
 
-func _process(delta):
+func _process(_delta):
 	#pointer selekcija
 	if ((Input.is_action_just_pressed("Down")) or (Input.is_action_just_pressed("Right"))):
 		get_child(pointer).hide();

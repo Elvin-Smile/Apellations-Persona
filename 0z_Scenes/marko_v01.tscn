@@ -1,19 +1,185 @@
-[gd_scene load_steps=4 format=3 uid="uid://geh42eeyin7c"]
+[gd_scene load_steps=15 format=3 uid="uid://geh42eeyin7c"]
 
-[ext_resource type="Script" uid="uid://cuba4ephfkfme" path="res://accomplice_guy_class.gd" id="1_s32s5"]
+[ext_resource type="Script" uid="uid://pek3dnvonhe8" path="res://0z_Scenes/marko.gd" id="1_163vl"]
 [ext_resource type="Texture2D" uid="uid://fbmii74usmb5" path="res://Marko Petriković/petrikovic_s0_v0.png" id="2_rm3ia"]
+[ext_resource type="Script" uid="uid://ovcr8vkccxwm" path="res://0z_Scenes/jan.gd" id="3_jkqyi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3k04"]
 size = Vector2(16, 16)
 
+[sub_resource type="Animation" id="Animation_eqvma"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Petrikovic:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_25btw"]
+resource_name = "idle_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Petrikovic:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_jkqyi"]
+resource_name = "idle_left"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Petrikovic:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+
+[sub_resource type="Animation" id="Animation_163vl"]
+resource_name = "idle_right"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Petrikovic:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+
+[sub_resource type="Animation" id="Animation_wecnt"]
+resource_name = "idle_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Petrikovic:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_rsnmf"]
+resource_name = "walk_down"
+length = 0.5333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Petrikovic:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_k4fgd"]
+resource_name = "walk_left"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Petrikovic:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_ci2ro"]
+resource_name = "walk_right"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Petrikovic:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
+[sub_resource type="Animation" id="Animation_myumf"]
+resource_name = "walk_up"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Petrikovic:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sje15"]
+_data = {
+&"RESET": SubResource("Animation_eqvma"),
+&"idle_down": SubResource("Animation_25btw"),
+&"idle_left": SubResource("Animation_jkqyi"),
+&"idle_right": SubResource("Animation_163vl"),
+&"idle_up": SubResource("Animation_wecnt"),
+&"walk_down": SubResource("Animation_rsnmf"),
+&"walk_left": SubResource("Animation_k4fgd"),
+&"walk_right": SubResource("Animation_ci2ro"),
+&"walk_up": SubResource("Animation_myumf")
+}
+
 [node name="Marko" type="CharacterBody2D"]
-script = ExtResource("1_s32s5")
+script = ExtResource("1_163vl")
 metadata/_custom_type_script = "uid://cuba4ephfkfme"
 
 [node name="Petrikovic" type="Sprite2D" parent="."]
 position = Vector2(0, -4)
 texture = ExtResource("2_rm3ia")
 hframes = 12
+frame = 4
 
 [node name="Guberina" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_t3k04")
+
+[node name="Jan" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_sje15")
+}
+autoplay = "idle_down"
+script = ExtResource("3_jkqyi")
+
+[connection signal="standing" from="." to="." method="_on_standing"]
+[connection signal="walking" from="." to="." method="_on_walking"]
