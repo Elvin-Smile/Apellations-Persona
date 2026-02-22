@@ -6,10 +6,11 @@ Menus, lists {
   - shop menus
   - dialogue
   - social stats
+  - saving
 }
 
 Overworld {
-  F movement
+  - movement
   - areas
   - items
   - people
