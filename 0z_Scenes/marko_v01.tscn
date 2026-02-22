@@ -24,6 +24,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_25btw"]
 resource_name = "idle_down"
+step = 0.0333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -161,6 +162,7 @@ _data = {
 }
 
 [node name="Marko" type="CharacterBody2D"]
+z_index = 10
 script = ExtResource("1_163vl")
 metadata/_custom_type_script = "uid://cuba4ephfkfme"
 
@@ -168,7 +170,7 @@ metadata/_custom_type_script = "uid://cuba4ephfkfme"
 position = Vector2(0, -4)
 texture = ExtResource("2_rm3ia")
 hframes = 12
-frame = 4
+frame = 1
 
 [node name="Guberina" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_t3k04")
