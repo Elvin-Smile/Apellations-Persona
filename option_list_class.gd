@@ -23,6 +23,5 @@ func _process(_delta):
 	if ((Input.is_action_just_pressed("Up")) or (Input.is_action_just_pressed("Left"))):
 		get_child(pointer).hide();
 		pointer -= 1;
-		if (pointer < 0):
-			pointer = button_num-1;
+		if (pointer < 0): pointer = button_num-1;
 		get_child(pointer).show();

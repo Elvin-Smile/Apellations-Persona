@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://geh42eeyin7c"]
+[gd_scene load_steps=16 format=3 uid="uid://geh42eeyin7c"]
 
 [ext_resource type="Script" uid="uid://pek3dnvonhe8" path="res://0z_Scenes/marko.gd" id="1_163vl"]
 [ext_resource type="Texture2D" uid="uid://fbmii74usmb5" path="res://Marko Petriković/petrikovic_s0_v0.png" id="2_rm3ia"]
 [ext_resource type="Script" uid="uid://ovcr8vkccxwm" path="res://0z_Scenes/jan.gd" id="3_jkqyi"]
+[ext_resource type="Script" uid="uid://b5mwminl2olv2" path="res://text_maker_class.gd" id="4_25btw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3k04"]
 size = Vector2(16, 16)
@@ -182,6 +183,10 @@ libraries = {
 }
 autoplay = "idle_down"
 script = ExtResource("3_jkqyi")
+
+[node name="Smalcelj" type="Node" parent="."]
+script = ExtResource("4_25btw")
+metadata/_custom_type_script = "uid://b5mwminl2olv2"
 
 [connection signal="standing" from="." to="." method="_on_standing"]
 [connection signal="walking" from="." to="." method="_on_walking"]

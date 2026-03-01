@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqkomghm5qk0h"]
+
+[ext_resource type="Script" uid="uid://b5mwminl2olv2" path="res://text_maker_class.gd" id="1_p54ph"]
+
+[node name="TextMaker" type="Node"]
+script = ExtResource("1_p54ph")
+metadata/_custom_type_script = "uid://b5mwminl2olv2"
+
+[node name="Text_00" type="Node2D" parent="."]
+
+[node name="Text_01" type="Node2D" parent="."]
+
+[node name="Text_02" type="Node2D" parent="."]
+
+[node name="Text_03" type="Node2D" parent="."]
+
+[node name="Text_04" type="Node2D" parent="."]
+
+[node name="Text_05" type="Node2D" parent="."]
+
+[node name="Text_06" type="Node2D" parent="."]
+
+[node name="Text_07" type="Node2D" parent="."]
+
+[node name="Text_08" type="Node2D" parent="."]
+
+[node name="Text_09" type="Node2D" parent="."]

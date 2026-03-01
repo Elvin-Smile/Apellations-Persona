@@ -14,7 +14,7 @@ var movement : Vector2 = Vector2.ZERO;
 var delta_movement_time = movement_delay;
 var moving : bool = false;
 var huh : bool = false;
-var current_animation = 0;
+var current_animation = 1;
 
 func _ready():
 	pass;
@@ -22,6 +22,7 @@ func _ready():
 #preraditi sve!!!!!!!
 
 func _process(_delta):
+	super._process(_delta);
 	if ((position == goal) and (delta_movement_time >= movement_delay)):
 		goal.y += Input.get_axis("Up", "Down")*tile_size;
 		movement.x = 0; movement.y = Input.get_axis("Up", "Down")*pixel_speed;

@@ -1,0 +1,95 @@
+[gd_scene load_steps=12 format=3 uid="uid://dpv6lwnvnlqyy"]
+
+[ext_resource type="Texture2D" uid="uid://b5n0ji66bsv0b" path="res://PauseMenu/background_v00.png" id="1_02nlh"]
+[ext_resource type="Texture2D" uid="uid://bkhd3mnrsljdn" path="res://PauseMenu/magic_v01.png" id="1_bipp4"]
+[ext_resource type="Texture2D" uid="uid://c0docwlhetuhb" path="res://PauseMenu/item_v01.png" id="2_02nlh"]
+[ext_resource type="Texture2D" uid="uid://bd1dpbvs0ei5d" path="res://PauseMenu/equip_v01.png" id="3_byb0y"]
+[ext_resource type="Texture2D" uid="uid://c453rvxm3c2d3" path="res://PauseMenu/stats_v01.png" id="4_5eliy"]
+[ext_resource type="Texture2D" uid="uid://w7ueivavxl7b" path="res://PauseMenu/apellation_v01.png" id="5_iqjv8"]
+[ext_resource type="Texture2D" uid="uid://nmd6q4bu6kva" path="res://PauseMenu/accomplice_v01.png" id="6_ykn0t"]
+[ext_resource type="Texture2D" uid="uid://bxj6sfvc0x077" path="res://PauseMenu/calendar_v01.png" id="7_m7nk5"]
+[ext_resource type="Texture2D" uid="uid://dgq4i26em6grj" path="res://PauseMenu/system_v01.png" id="8_xo3vb"]
+[ext_resource type="Script" uid="uid://bja37g7p0df6p" path="res://0z_Scenes/pause_menu_buttons.gd" id="10_5eliy"]
+[ext_resource type="Texture2D" uid="uid://bm2bmnye7n3dg" path="res://PauseMenu/pause_menu_button_v00.png" id="11_iqjv8"]
+
+[node name="PauseMenu" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_02nlh")
+
+[node name="PauseMenuOpts" type="Node2D" parent="."]
+
+[node name="MagicSprite" type="Sprite2D" parent="PauseMenuOpts"]
+position = Vector2(-85, -77)
+texture = ExtResource("1_bipp4")
+
+[node name="ItemSprite" type="Sprite2D" parent="PauseMenuOpts"]
+position = Vector2(-85, -56)
+texture = ExtResource("2_02nlh")
+
+[node name="EquipSprite" type="Sprite2D" parent="PauseMenuOpts"]
+position = Vector2(-85, -35)
+texture = ExtResource("3_byb0y")
+
+[node name="StatsSprite" type="Sprite2D" parent="PauseMenuOpts"]
+position = Vector2(-85, -14)
+texture = ExtResource("4_5eliy")
+
+[node name="ApellationSprite" type="Sprite2D" parent="PauseMenuOpts"]
+position = Vector2(-85, 7)
+texture = ExtResource("5_iqjv8")
+
+[node name="AccompliceSprite" type="Sprite2D" parent="PauseMenuOpts"]
+position = Vector2(-85, 28)
+texture = ExtResource("6_ykn0t")
+
+[node name="CalendarSprite" type="Sprite2D" parent="PauseMenuOpts"]
+position = Vector2(-85, 49)
+texture = ExtResource("7_m7nk5")
+
+[node name="SystemSprite" type="Sprite2D" parent="PauseMenuOpts"]
+position = Vector2(-85, 70)
+texture = ExtResource("8_xo3vb")
+
+[node name="PauseMenuButtons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -85.0
+offset_top = -77.0
+offset_right = -42.0
+offset_bottom = 101.0
+script = ExtResource("10_5eliy")
+metadata/_custom_type_script = "uid://bwibmnfhgsjt1"
+
+[node name="MagicButton" type="Sprite2D" parent="PauseMenuButtons"]
+texture = ExtResource("11_iqjv8")
+
+[node name="ItemButton" type="Sprite2D" parent="PauseMenuButtons"]
+position = Vector2(0, 21)
+texture = ExtResource("11_iqjv8")
+
+[node name="EquipButton" type="Sprite2D" parent="PauseMenuButtons"]
+position = Vector2(0, 42)
+texture = ExtResource("11_iqjv8")
+
+[node name="StatsButton" type="Sprite2D" parent="PauseMenuButtons"]
+position = Vector2(0, 63)
+texture = ExtResource("11_iqjv8")
+
+[node name="ApellationButton" type="Sprite2D" parent="PauseMenuButtons"]
+position = Vector2(0, 84)
+texture = ExtResource("11_iqjv8")
+
+[node name="AccompliceButton" type="Sprite2D" parent="PauseMenuButtons"]
+position = Vector2(0, 105)
+texture = ExtResource("11_iqjv8")
+
+[node name="CalendarButton" type="Sprite2D" parent="PauseMenuButtons"]
+position = Vector2(0, 126)
+texture = ExtResource("11_iqjv8")
+
+[node name="SystemButton" type="Sprite2D" parent="PauseMenuButtons"]
+position = Vector2(0, 147)
+texture = ExtResource("11_iqjv8")
