@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b5mwminl2olv2" path="res://text_maker_class.gd" id="1_p54ph"]
 
-[node name="TextMaker" type="Node"]
+[node name="TextMaker" type="Node2D"]
 script = ExtResource("1_p54ph")
 metadata/_custom_type_script = "uid://b5mwminl2olv2"
 

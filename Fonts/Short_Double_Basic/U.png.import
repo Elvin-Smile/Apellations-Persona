@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmwon68t2r76s"
-path="res://.godot/imported/time_indicator_v00.png-106dcb90844aea6c460b4ebe26e533a6.ctex"
+uid="uid://dhdxkv472abth"
+path="res://.godot/imported/U.png-5e993942c076e95b540e4893775c5e67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MainMenu/time_indicator_v00.png"
-dest_files=["res://.godot/imported/time_indicator_v00.png-106dcb90844aea6c460b4ebe26e533a6.ctex"]
+source_file="res://Fonts/Short_Double_Basic/U.png"
+dest_files=["res://.godot/imported/U.png-5e993942c076e95b540e4893775c5e67.ctex"]
 
 [params]
 

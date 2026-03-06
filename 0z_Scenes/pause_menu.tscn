@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://nmd6q4bu6kva" path="res://PauseMenu/accomplice_v01.png" id="6_ykn0t"]
 [ext_resource type="Texture2D" uid="uid://bxj6sfvc0x077" path="res://PauseMenu/calendar_v01.png" id="7_m7nk5"]
 [ext_resource type="Texture2D" uid="uid://dgq4i26em6grj" path="res://PauseMenu/system_v01.png" id="8_xo3vb"]
-[ext_resource type="Script" uid="uid://bja37g7p0df6p" path="res://0z_Scenes/pause_menu_buttons.gd" id="10_5eliy"]
+[ext_resource type="Script" uid="uid://bja37g7p0df6p" path="res://0z_Scripts/pause_menu_buttons.gd" id="10_5eliy"]
 [ext_resource type="Texture2D" uid="uid://bm2bmnye7n3dg" path="res://PauseMenu/pause_menu_button_v00.png" id="11_iqjv8"]
 
 [node name="PauseMenu" type="Node2D"]

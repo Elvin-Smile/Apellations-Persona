@@ -1,9 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://geh42eeyin7c"]
+[gd_scene load_steps=18 format=3 uid="uid://geh42eeyin7c"]
 
-[ext_resource type="Script" uid="uid://pek3dnvonhe8" path="res://0z_Scenes/marko.gd" id="1_163vl"]
+[ext_resource type="Script" uid="uid://pek3dnvonhe8" path="res://0z_Scripts/marko.gd" id="1_163vl"]
 [ext_resource type="Texture2D" uid="uid://fbmii74usmb5" path="res://Marko Petriković/petrikovic_s0_v0.png" id="2_rm3ia"]
-[ext_resource type="Script" uid="uid://ovcr8vkccxwm" path="res://0z_Scenes/jan.gd" id="3_jkqyi"]
+[ext_resource type="Script" uid="uid://ovcr8vkccxwm" path="res://0z_Scripts/jan.gd" id="3_jkqyi"]
 [ext_resource type="Script" uid="uid://b5mwminl2olv2" path="res://text_maker_class.gd" id="4_25btw"]
+[ext_resource type="Texture2D" uid="uid://ucp223s6f2e4" path="res://UI/date_box_v00.png" id="5_wecnt"]
+[ext_resource type="Texture2D" uid="uid://bki3xhidao41h" path="res://UI/day_v00.png" id="6_ci2ro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3k04"]
 size = Vector2(16, 16)
@@ -184,9 +186,26 @@ libraries = {
 autoplay = "idle_down"
 script = ExtResource("3_jkqyi")
 
-[node name="Smalcelj" type="Node" parent="."]
+[node name="Smalcelj" type="Node2D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("4_25btw")
 metadata/_custom_type_script = "uid://b5mwminl2olv2"
+
+[node name="Lovro" type="Camera2D" parent="."]
+
+[node name="Cutura" type="Node2D" parent="Lovro"]
+script = ExtResource("4_25btw")
+metadata/_custom_type_script = "uid://b5mwminl2olv2"
+
+[node name="Borna" type="Sprite2D" parent="Lovro"]
+unique_name_in_owner = true
+position = Vector2(94, -66)
+texture = ExtResource("5_wecnt")
+
+[node name="Gabric" type="Sprite2D" parent="Lovro"]
+unique_name_in_owner = true
+position = Vector2(126, -60)
+texture = ExtResource("6_ci2ro")
 
 [connection signal="standing" from="." to="." method="_on_standing"]
 [connection signal="walking" from="." to="." method="_on_walking"]

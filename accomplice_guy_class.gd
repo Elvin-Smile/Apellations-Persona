@@ -6,7 +6,6 @@ signal walking(dirc : int);
 signal standing(dirc : int);
 
 const pixel_speed : int = 1;
-const tile_size : int = 16;
 const movement_delay : int = 5;
 var coordinate : Vector2 = Vector2.ZERO;
 var goal : Vector2 = Vector2.ZERO;
@@ -24,14 +23,14 @@ func _ready():
 func _process(_delta):
 	super._process(_delta);
 	if ((position == goal) and (delta_movement_time >= movement_delay)):
-		goal.y += Input.get_axis("Up", "Down")*tile_size;
+		goal.y += Input.get_axis("Up", "Down")*gv.tile_size;
 		movement.x = 0; movement.y = Input.get_axis("Up", "Down")*pixel_speed;
 		moving = true;
 		if (movement.y):
 			current_animation = 0.5+movement.y*0.5;
 			walking.emit(current_animation);
 	if ((position == goal) and (delta_movement_time >= movement_delay)):
-		goal.x += Input.get_axis("Left", "Right")*tile_size;
+		goal.x += Input.get_axis("Left", "Right")*gv.tile_size;
 		movement.x = Input.get_axis("Left", "Right")*pixel_speed; movement.y = 0;
 		moving = true;
 		if (movement.x):
