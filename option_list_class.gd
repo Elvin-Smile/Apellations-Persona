@@ -12,7 +12,6 @@ func _ready():
 	get_child(0).show();
 	for i in range(1, button_num):
 		get_child(i).hide();
-	print(button_num);
 
 func _process(_delta):
 	#pointer selekcija

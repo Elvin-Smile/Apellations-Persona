@@ -7,35 +7,40 @@ signal standing(dirc : int);
 
 const pixel_speed : int = 1;
 const movement_delay : int = 5;
-var coordinate : Vector2 = Vector2.ZERO;
-var goal : Vector2 = Vector2.ZERO;
 var movement : Vector2 = Vector2.ZERO;
 var delta_movement_time = movement_delay;
 var moving : bool = false;
 var huh : bool = false;
-var current_animation = 1;
 
 func _ready():
-	pass;
+	mpg.coordinate = mpg.goal;
+	position = mpg.coordinate;
 
-#preraditi sve!!!!!!!
 
 func _process(_delta):
 	super._process(_delta);
-	if ((position == goal) and (delta_movement_time >= movement_delay)):
-		goal.y += Input.get_axis("Up", "Down")*gv.tile_size;
+	
+	if (Input.is_action_just_pressed("Menu")):
+		if (moving):
+			mpg.coordinate = mpg.goal;
+			position = mpg.goal;
+		get_tree().change_scene_to_file("res://0z_Scenes/pause_menu.tscn");
+		
+	if ((position == mpg.goal) and (delta_movement_time >= movement_delay)):
+		mpg.goal.y += Input.get_axis("Up", "Down")*gv.tile_size;
+		print(mpg.goal.y);
 		movement.x = 0; movement.y = Input.get_axis("Up", "Down")*pixel_speed;
 		moving = true;
 		if (movement.y):
-			current_animation = 0.5+movement.y*0.5;
-			walking.emit(current_animation);
-	if ((position == goal) and (delta_movement_time >= movement_delay)):
-		goal.x += Input.get_axis("Left", "Right")*gv.tile_size;
+			mpg.current_animation = 0.5+movement.y*0.5;
+			walking.emit(mpg.current_animation);
+	if ((position == mpg.goal) and (delta_movement_time >= movement_delay)):
+		mpg.goal.x += Input.get_axis("Left", "Right")*gv.tile_size;
 		movement.x = Input.get_axis("Left", "Right")*pixel_speed; movement.y = 0;
 		moving = true;
 		if (movement.x):
-			current_animation = 2.5+movement.x*0.5;
-			walking.emit(current_animation);
+			mpg.current_animation = 2.5+movement.x*0.5;
+			walking.emit(mpg.current_animation);
 
 func _physics_process(_delta):
 	huh = moving;
@@ -45,9 +50,11 @@ func _physics_process(_delta):
 	
 	if (huh): delta_movement_time += 1;
 	if (huh): position += movement;
-	if (position == goal):
+	if (position == mpg.goal):
 		if (moving):
 			delta_movement_time = 0;
-			standing.emit(current_animation);
+			standing.emit(mpg.current_animation);
+			
 		moving = false;
 		movement = Vector2.ZERO;
+		mpg.coordinate = position;

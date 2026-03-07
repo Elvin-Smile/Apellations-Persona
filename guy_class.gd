@@ -6,8 +6,7 @@ const clock_position : Vector2 = Vector2(57, -88);
 var date_to_print : String = "";
 
 func _process(_delta):
-	if (Input.is_action_just_pressed("Menu")):
-		get_tree().change_scene_to_file("res://0z_Scenes/pause_menu.tscn");
+	pass;
 
 func update_clock(maker : TextMaker, spriter : Sprite2D):
 	spriter.texture = load("res://UI/"+gv.time_names[gv.current_time]+"_v00.png");

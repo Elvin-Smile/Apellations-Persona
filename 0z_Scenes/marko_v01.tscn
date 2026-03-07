@@ -66,7 +66,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1.000001),
 "update": 1,
 "values": [10]
 }
@@ -183,7 +183,6 @@ unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_sje15")
 }
-autoplay = "idle_down"
 script = ExtResource("3_jkqyi")
 
 [node name="Smalcelj" type="Node2D" parent="."]

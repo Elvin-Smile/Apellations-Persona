@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 gv="*res://0z_Scripts/global_var.gd"
 tm="*res://text_maker_class.gd"
+mpg="*res://0z_Scripts/marko_global_var.gd"
 
 [display]
 

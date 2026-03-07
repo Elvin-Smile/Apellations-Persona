@@ -3,6 +3,7 @@ extends Node2D
 class_name TextMaker
 
 
+const layer_number : int = 10;
 const letter_path : String = "res://Fonts/";
 const space_size : Dictionary = {
 	"Basic" : 1,
@@ -26,6 +27,10 @@ var letter_sprite : Sprite2D;
 var current_word : int = 0;
 var last_one : String = " ";
 
+func _ready():
+	for i in range(0, layer_number):
+		add_child(Node2D.new());
+
 func make_text(text : String = "", font : String = "", start_position : Vector2 = Vector2.ZERO, end_position : Vector2 = Vector2(200, 200), index : int = 0, zvalue : int = 0):
 	#zamijeni child s novim
 	remove_child(get_child(index));
@@ -37,9 +42,7 @@ func make_text(text : String = "", font : String = "", start_position : Vector2 
 	#dobiva word length
 	for i in text:
 		if ((i == " ") or (i == "~")):
-			print("trenutna duljina je ", trenutna_duljina);
 			word_size.append(trenutna_duljina);
-			print("array je", word_size);
 			trenutna_duljina = 0;
 		else:
 			letter_sprite_path = letter_path+font+"/"+i+".png";
