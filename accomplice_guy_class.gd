@@ -28,7 +28,6 @@ func _process(_delta):
 		
 	if ((position == mpg.goal) and (delta_movement_time >= movement_delay)):
 		mpg.goal.y += Input.get_axis("Up", "Down")*gv.tile_size;
-		print(mpg.goal.y);
 		movement.x = 0; movement.y = Input.get_axis("Up", "Down")*pixel_speed;
 		moving = true;
 		if (movement.y):

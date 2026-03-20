@@ -1,5 +1,5 @@
 @icon("res://option_list_icon.png")
-extends Control
+extends Node2D
 class_name OptionList
 
 
