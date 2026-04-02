@@ -176,7 +176,6 @@ hframes = 12
 frame = 1
 
 [node name="Guberina" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("RectangleShape2D_t3k04")
 
 [node name="Jan" type="AnimationPlayer" parent="."]
@@ -211,5 +210,6 @@ z_index = 110
 position = Vector2(126, -60)
 texture = ExtResource("6_ci2ro")
 
-[connection signal="standing" from="." to="." method="_on_standing"]
-[connection signal="walking" from="." to="." method="_on_walking"]
+[node name="Maks" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+target_position = Vector2(0, 8)
